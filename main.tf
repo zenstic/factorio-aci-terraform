@@ -1,5 +1,5 @@
 variable REGION {
-  default = "westeurope"
+  default = "eastus"
 }
 
 variable n_cores {
@@ -15,11 +15,11 @@ variable package_deploy_url {
 }
 
 variable RESOURCE_GROUP_NAME {
-  default = "factorio"
+  default = "factorio_Test"
 }
 
 variable factorio_server_version {
-  default = "0.18.21"
+  default = "1.1.110"
 }
 
 variable dns_label {}
@@ -71,11 +71,11 @@ resource "azurerm_container_group" "gameserv" {
     memory = var.mem_gb
 
     ports {
-      port     = 34197
+      port     = 4242424
       protocol = "UDP"
     }
     ports {
-      port     = 27015
+      port     = 424242
       protocol = "TCP"
     }
 
